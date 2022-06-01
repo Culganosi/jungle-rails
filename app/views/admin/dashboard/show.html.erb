@@ -1,2 +1,10 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<h1>Admin Dashboard</h1>
+
+<section>
+<h5> There is a total of <%= @product_total %> products in the store database</h5>
+
+<h5> There is a total of <%= @category_total %> categories in the store database</h2>
+
+<%= link_to 'Display All Products', [:admin, :products], class: 'btn btn-success' %>
+</section>
+
