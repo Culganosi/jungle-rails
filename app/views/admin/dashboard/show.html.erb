@@ -2,9 +2,11 @@
 
 <section>
 <h5> There is a total of <%= @product_total %> products in the store database</h5>
-
-<h5> There is a total of <%= @category_total %> categories in the store database</h2>
-
 <%= link_to 'Display All Products', [:admin, :products], class: 'btn btn-success' %>
+</section>
+
+<section>
+<h5> There is a total of <%= @category_total %> categories in the store database</h2>
+<%= link_to 'Display All Categories', [:admin, :categories], class: 'btn btn-success' %>
 </section>
 
