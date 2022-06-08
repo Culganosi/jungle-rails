@@ -14,7 +14,7 @@ RSpec.describe Product, type: :model do
       expect(@product).to be_valid
   end
 
-  it "should not valid unless there is a name set" do
+  it "should not be valid unless there is a name set" do
     @category = Category.new(name: "Category Test")
     @product = Product.new(
       name: nil,
@@ -26,7 +26,7 @@ RSpec.describe Product, type: :model do
     expect(@product.errors.full_messages).to include ("Name can't be blank")
   end
   
-  it "should not valid unless there is a price set" do
+  it "should not be valid unless there is a price set" do
     @category = Category.new(name: "Category Test")
     @product = Product.new(
       name: "Product Test",
@@ -38,7 +38,7 @@ RSpec.describe Product, type: :model do
     expect(@product.errors.full_messages).to include ("Price cents is not a number")
   end
 
-  it "should not valid unless there is a quantity set" do
+  it "should not be valid unless there is a quantity set" do
     @category = Category.new(name: "Category Test")
     @product = Product.new(
       name: "Product Test",
@@ -50,7 +50,7 @@ RSpec.describe Product, type: :model do
       expect(@product.errors.full_messages).to eq ["Quantity can't be blank"]
     end
     
-    it "should not valid unless there is a category set" do
+    it "should not be valid unless there is a category set" do
       @category = Category.new(name: "Category Test")
       @product = Product.new(
         name: "Test Product",
